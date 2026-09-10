@@ -1,0 +1,893 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #14120e 0%,
+            #11100d 45%,
+            #090807 100%
+        );
+
+    color: #e4c16a;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.page {
+    position: relative;
+
+    width: min(110%, 650px);
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding:
+        65px 30px
+        50px;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background-effects {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+
+.background-effects::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(212, 165, 60, 0.08),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(212, 165, 60, 0.06),
+            transparent 25%
+        );
+}
+
+
+/* =========================================
+   GOLD PARTICLES
+========================================= */
+
+.gold-particle {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: #edd01a;
+
+    border-radius: 50%;
+
+    opacity: 0.25;
+
+    box-shadow:
+        0 0 12px rgba(242, 228, 38, 0.8);
+}
+
+
+.particle-1 {
+    top: 12%;
+    left: 12%;
+}
+
+
+.particle-2 {
+    top: 28%;
+    right: 15%;
+    width: 3px;
+    height: 3px;
+}
+
+
+.particle-3 {
+    top: 48%;
+    left: 7%;
+    width: 4px;
+    height: 4px;
+}
+
+
+.particle-4 {
+    top: 65%;
+    right: 10%;
+    width: 6px;
+    height: 6px;
+}
+
+
+.particle-5 {
+    top: 82%;
+    left: 18%;
+    width: 3px;
+    height: 3px;
+}
+
+
+.particle-6 {
+    top: 90%;
+    right: 22%;
+    width: 4px;
+    height: 4px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    margin-bottom: 35px;
+}
+
+
+.brand h1 {
+    font-size: clamp(60px, 13vw, 105px);
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    line-height: 0.9;
+
+    color: #e6c36b;
+
+    text-shadow:
+        0 0 25px rgba(218, 176, 75, 0.12);
+}
+
+
+.brand-subtitle {
+    margin-top: 18px;
+
+    font-size: 17px;
+
+    letter-spacing: 9px;
+
+    color: #d4b25f;
+}
+
+
+/* =========================================
+   ORNAMENTS
+========================================= */
+
+.ornament {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 28px auto;
+
+    max-width: 340px;
+}
+
+
+.ornament span {
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #f5f51b
+        );
+}
+
+
+.ornament span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            #f5f51b
+        );
+}
+
+
+.ornament b {
+    font-size: 17px;
+
+    font-weight: 400;
+
+    color: #f5f51b;
+}
+
+
+/* =========================================
+   LANGUAGE
+========================================= */
+
+.language-section {
+    margin-top: 20px;
+}
+
+
+#language-title {
+    font-size: clamp(26px, 5vw, 34px);
+
+    color: #e4d4ad;
+
+    margin-bottom: 28px;
+}
+
+
+.language-buttons {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    direction: ltr;
+}
+
+.language-buttons button {
+    width: 160px;
+    min-width: 160px;
+
+    padding: 14px 25px;
+
+    border: 1px solid #a47c2e;
+
+    border-radius: 10px;
+
+    background:
+        rgba(16, 14, 11, 0.7);
+
+    color: #dfb955;
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Naskh Arabic",
+        serif;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.language-buttons button:hover {
+    transform: translateY(-3px);
+
+    background: rgba(57, 43, 21, 0.45);
+
+    box-shadow:
+        0 5px 25px rgba(193, 147, 54, 0.12);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description-section {
+    margin-top: 25px;
+}
+
+
+#description {
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    font-size: clamp(22px, 4.5vw, 30px);
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    color: #e0d2ad;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================
+   CONTACT BUTTONS — LUXURY
+========================================= */
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 500px;
+    margin: 28px auto 0;
+}
+
+
+.contact-button {
+    position: relative;
+    display: grid;
+    grid-template-columns: 58px 1fr 30px;
+    align-items: center;
+    min-height: 72px;
+    padding: 0 20px;
+    overflow: hidden;
+
+    border: 1px solid rgba(190, 148, 67, 0.55);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(105deg,
+            rgba(31, 26, 18, 0.92),
+            rgba(13, 12, 10, 0.88) 48%,
+            rgba(31, 25, 16, 0.90));
+
+    color: #dfbd69;
+    text-decoration: none;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 226, 153, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.35),
+        0 8px 24px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Soft moving highlight across the glass-like surface */
+.contact-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -45%;
+    width: 32%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 225, 153, 0.08),
+        transparent
+    );
+
+    transform: skewX(-18deg);
+    transition: left 0.65s ease;
+    pointer-events: none;
+}
+
+
+.contact-button:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(225, 183, 92, 0.85);
+
+    background:
+        linear-gradient(105deg,
+            rgba(45, 36, 22, 0.94),
+            rgba(20, 17, 13, 0.92) 48%,
+            rgba(45, 35, 21, 0.92));
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 231, 171, 0.12),
+        0 12px 32px rgba(0, 0, 0, 0.30),
+        0 0 24px rgba(205, 160, 70, 0.10);
+}
+
+
+.contact-button:hover::before {
+    left: 120%;
+}
+
+
+.contact-button:active {
+    transform: translateY(-1px) scale(0.992);
+}
+
+
+.contact-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #e5c372;
+    text-align: left;
+
+    filter: drop-shadow(0 0 8px rgba(216, 172, 79, 0.10));
+}
+
+
+.contact-icon svg {
+    width: 29px;
+    height: 29px;
+}
+
+
+.contact-button span:nth-child(2) {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    color: #e1c276;
+    transition: color 0.3s ease;
+}
+
+
+.contact-button:hover span:nth-child(2) {
+    color: #f0d38b;
+}
+
+
+.arrow {
+    position: relative;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 1;
+    text-align: right;
+    color: #cda451;
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+
+.contact-button:hover .arrow {
+    transform: translateX(4px);
+    color: #edcb7b;
+}
+
+
+/* Keep the icon/text alignment elegant in RTL languages. */
+[dir="rtl"] .contact-icon {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+
+[dir="rtl"] .contact-button span:nth-child(2) {
+    text-align: right;
+}
+
+
+[dir="rtl"] .arrow {
+    text-align: left;
+}
+
+
+@media (max-width: 600px) {
+    .contact-button {
+        min-height: 66px;
+        grid-template-columns: 52px 1fr 28px;
+        padding: 0 17px;
+        border-radius: 13px;
+    }
+
+    .contact-button span:nth-child(2) {
+        font-size: 22px;
+    }
+
+    .contact-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-button,
+    .contact-button::before,
+    .contact-button span:nth-child(2),
+    .arrow {
+        transition: none;
+    }
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding-top: 15px;
+
+    padding-bottom: 30px;
+}
+
+
+.bottom-ornament {
+    margin-top: 45px;
+
+    max-width: 300px;
+}
+
+
+/* =========================================
+   ARABIC / KURDISH SUPPORT
+========================================= */
+
+[dir="rtl"] {
+    font-family:
+        "Noto Naskh Arabic",
+        serif;
+}
+
+
+[dir="rtl"] .contact-button span:nth-child(2) {
+    text-align: right;
+}
+
+
+[dir="rtl"] .contact-icon {
+    text-align: right;
+}
+
+
+[dir="rtl"] .arrow {
+    text-align: left;
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding:
+            45px 20px
+            35px;
+    }
+
+
+    .brand h1 {
+        font-size: 65px;
+    }
+
+
+    .brand-subtitle {
+        font-size: 14px;
+
+        letter-spacing: 7px;
+    }
+
+
+    .language-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .language-buttons button {
+        width: min(100%, 330px);
+    }
+
+
+    #description {
+        font-size: 23px;
+    }
+
+
+    .contact-button {
+        min-height: 64px;
+    }
+
+
+    .contact-button span:nth-child(2) {
+        font-size: 22px;
+    }
+
+}
+/* =========================================
+   LUXURY BACKGROUND
+========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(190, 145, 55, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(190, 145, 55, 0.06),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 65%,
+            rgba(190, 145, 55, 0.06),
+            transparent 25%
+        );
+
+    z-index: 0;
+}
+
+
+/* Very subtle gold glow around the page */
+
+.page::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 500px;
+    height: 500px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210, 165, 65, 0.045),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+} 
+/* =========================================
+   FLOATING JEWELRY BACKGROUND
+========================================= */
+
+.jewelry-background {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.jewelry {
+    position: absolute;
+    display: block;
+
+    pointer-events: none;
+    user-select: none;
+
+    /* Subtle enough that the text always stays readable */
+    opacity: 0.16;
+
+    filter:
+        drop-shadow(0 0 18px rgba(210, 165, 65, 0.16))
+        drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35));
+
+    will-change: transform;
+
+    /* A very gentle, premium floating motion */
+    transform-origin: center center;
+}
+
+
+/* =========================================
+   GOLD BAR
+========================================= */
+
+.gold-bar {
+    width: 300px;
+
+    left: -105px;
+    top: 20%;
+
+    opacity: 0.15;
+
+    transform: rotate(-18deg);
+    animation: floatGoldBar 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+
+/* =========================================
+   NECKLACE
+========================================= */
+
+.necklace {
+    width: 330px;
+
+    right: -135px;
+    top: 2%;
+
+    opacity: 0.14;
+
+    transform: rotate(8deg);
+    animation: floatNecklace 15s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+
+/* =========================================
+   DIAMOND RING
+========================================= */
+
+.diamond-ring {
+    width: 200px;
+
+    right: -35px;
+    bottom: 20%;
+
+    opacity: 0.17;
+
+    transform: rotate(-12deg);
+    animation: floatDiamondRing 11s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+
+/* =========================================
+   GOLD RING
+========================================= */
+
+.gold-ring {
+    width: 240px;
+
+    left: -55px;
+    bottom: 5%;
+
+    opacity: 0.16;
+
+    transform: rotate(-18deg);
+    animation: floatGoldRing 14s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+
+/* =========================================
+   FLOATING ANIMATIONS
+========================================= */
+
+@keyframes floatGoldBar {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(-18deg);
+    }
+
+    50% {
+        transform: translate3d(10px, -16px, 0) rotate(-15deg);
+    }
+}
+
+
+@keyframes floatNecklace {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(8deg);
+    }
+
+    50% {
+        transform: translate3d(-12px, 14px, 0) rotate(11deg);
+    }
+}
+
+
+@keyframes floatDiamondRing {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(-12deg);
+    }
+
+    50% {
+        transform: translate3d(-10px, -14px, 0) rotate(-7deg);
+    }
+}
+
+
+@keyframes floatGoldRing {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(-18deg);
+    }
+
+    50% {
+        transform: translate3d(12px, -12px, 0) rotate(-13deg);
+    }
+}
+
+
+/* Keep the luxury effect comfortable for users who disable motion. */
+@media (prefers-reduced-motion: reduce) {
+    .jewelry {
+        animation: none;
+    }
+}
+
+/* =========================================
+   CONTACT ICONS
+========================================= */
+
+.contact-icon svg {
+    width: 29px;
+    height: 50px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.contact-icon svg path {
+    fill: none;
+}
+
+.contact-icon svg circle,
+.contact-icon svg rect {
+    fill: none;
+}
